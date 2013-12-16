@@ -12,7 +12,7 @@ mod.directive('infiniteScroll', [
         if (attrs.infiniteScrollElement) {
           $container = angular.element($window);
         } else {
-          $container = angular.element(elem);
+          $container = angular.element(elem.parent());
         }
         scrollDistance = 0;
         if (attrs.infiniteScrollDistance != null) {
